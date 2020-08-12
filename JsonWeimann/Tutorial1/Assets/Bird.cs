@@ -5,7 +5,7 @@ public class Bird : MonoBehaviour
 {
     [SerializeField] private float launchPower = 350;
 
-    private Vector3? _initialPosition = null;
+    private Vector3 _initialPosition;
     private bool _birdWasLaunched;
     private float _timeSittingAround;
 
@@ -16,6 +16,9 @@ public class Bird : MonoBehaviour
 
     private void Update()
     {
+        GetComponent<LineRenderer>().SetPosition(0, transform.position);
+        GetComponent<LineRenderer>().SetPosition(1, _initialPosition);
+
         if (_birdWasLaunched && GetComponent<Rigidbody2D>().velocity.magnitude <= 0.1)
         {
             _timeSittingAround += Time.deltaTime;
@@ -34,11 +37,13 @@ public class Bird : MonoBehaviour
 
     private void OnMouseDown()
     {
+        GetComponent<LineRenderer>().enabled = true;
         GetComponent<SpriteRenderer>().color = Color.red;
     }
 
     private void OnMouseUp()
     {
+        GetComponent<LineRenderer>().enabled = false;
         GetComponent<SpriteRenderer>().color = Color.white;
 
         if (_initialPosition != null)
