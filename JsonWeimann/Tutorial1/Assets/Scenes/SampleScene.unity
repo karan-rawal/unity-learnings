@@ -448,7 +448,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.928906
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -642,6 +642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e168b97a2bd03401ea2cc72203edca42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _prefabEnemyDeathEffect: {fileID: 4153455340486466218, guid: 30c034af33c1e4ebaa3c02388ea559da, type: 3}
 --- !u!1 &1092358882
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,6 +1327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e168b97a2bd03401ea2cc72203edca42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _prefabEnemyDeathEffect: {fileID: 4153455340486466218, guid: 30c034af33c1e4ebaa3c02388ea559da, type: 3}
 --- !u!1 &1569106251
 GameObject:
   m_ObjectHideFlags: 0
